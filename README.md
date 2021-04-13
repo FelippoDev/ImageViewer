@@ -1,4 +1,4 @@
 # ImageViewer
 Image app viewer created in Python using Tkinter
 
-Created using a GUI called tkinter
+Simple Image app viewer using tkinter.
