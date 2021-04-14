@@ -15,6 +15,8 @@ my_label.grid(row=0, column=0, columnspan=3)
 def forward():
     global n
     global my_label
+    global status
+
     if len(img_list) - 1 == n:
         n += 0
     else:
@@ -24,10 +26,16 @@ def forward():
     my_label = Label(image=img_list[n])
     my_label.grid(row=0, column=0, columnspan=3)
 
+    status.grid_forget()
+    status = Label(root, text=f"status: {n+1}")
+    status.grid(row=2, column=0, columnspan=3)
+
 
 def back():
     global n
     global my_label
+    global status
+
     if n == 0:
         n += 0
     elif n > 0:
@@ -37,6 +45,10 @@ def back():
     my_label = Label(image=img_list[n])
     my_label.grid(row=0, column=0, columnspan=3)
 
+    status.grid_forget()
+    status = Label(root, text=f"status: {n+1}")
+    status.grid(row=2, column=0, columnspan=3)
+
 
 btn_quit = Button(root, text="Exit Program", command=root.quit)
 btn_forward = Button(root, text=">>", command=forward)
@@ -45,5 +57,8 @@ btn_back = Button(root, text="<<", command=back)
 btn_forward.grid(row=1, column=2)
 btn_back.grid(row=1, column=0)
 btn_quit.grid(row=1, column=1)
+
+status = Label(root, text=f"status: {n+1}")
+status.grid(row=2, column=0, columnspan=3)
 
 root.mainloop()
