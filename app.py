@@ -27,8 +27,8 @@ def forward():
     my_label.grid(row=0, column=0, columnspan=3)
 
     status.grid_forget()
-    status = Label(root, text=f"status: {n+1}")
-    status.grid(row=2, column=0, columnspan=3)
+    status = Label(root, text=f"Image {n+1} of {len(img_list)}", relief=SUNKEN, bd=1)
+    status.grid(row=2, column=0, columnspan=3, sticky=W+E)
 
 
 def back():
@@ -46,8 +46,8 @@ def back():
     my_label.grid(row=0, column=0, columnspan=3)
 
     status.grid_forget()
-    status = Label(root, text=f"status: {n+1}")
-    status.grid(row=2, column=0, columnspan=3)
+    status = Label(root, text=f"Image {n+1} of {len(img_list)}", relief=SUNKEN, bd=1)
+    status.grid(row=2, column=0, columnspan=3, sticky=W+E)
 
 
 btn_quit = Button(root, text="Exit Program", command=root.quit)
@@ -56,9 +56,9 @@ btn_back = Button(root, text="<<", command=back)
 
 btn_forward.grid(row=1, column=2)
 btn_back.grid(row=1, column=0)
-btn_quit.grid(row=1, column=1)
+btn_quit.grid(row=1, column=1, pady=10)
 
-status = Label(root, text=f"status: {n+1}")
-status.grid(row=2, column=0, columnspan=3)
+status = Label(root, text=f"Image {n+1} of {len(img_list)}", relief=SUNKEN, bd=1)
+status.grid(row=2, column=0, columnspan=3, sticky=W+E)
 
 root.mainloop()
