@@ -9,7 +9,7 @@ In the GIF below we have a demonstration of the app being executed
 
 ![Image_Viewer](https://user-images.githubusercontent.com/65267252/114647207-14faec80-9cb3-11eb-80c6-3b17c86967b9.gif)
 
-The following code shows all the images that are going to be used in the app are being stored in the list `img_list`, using the module `PIL` to open the images. After that we use the function `Label` to put the images in the GUI.
+The following code shows all the images that are going to be used in the app are being stored in the list `img_list`, using the module `PIL` to open the images. After that we use the function `Label()` to put the images in the GUI.
 
 
 
@@ -65,7 +65,7 @@ def forward():
     status.grid(row=2, column=0, columnspan=3, sticky=W+E)
 ```
 
-In the `back` function we have the same principles as the `forward` function but with the difference that if `n` is equal to 0 it means that we are in the first photo so we won't be able to go back and if it's not, the value stored in `n`  will be subtracted by -1 so it will be able to go to the previous image.
+In the `back()` function we have the same principles as the `forward()` function but with the difference that if `n` is equal to 0 it means that we are in the first photo so we won't be able to go back and if it's not, the value stored in `n`  will be subtracted by -1 so it will be able to go to the previous image.
 
 ```python
 def back():
