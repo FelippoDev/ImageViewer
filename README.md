@@ -6,6 +6,7 @@ In the GIF below we have a demonstration of the app being executed
 
 
 
+
 ![Image_Viewer](https://user-images.githubusercontent.com/65267252/114647207-14faec80-9cb3-11eb-80c6-3b17c86967b9.gif)
 
 The following code shows all the images that are going to be used in the app are being stored in the list `img_list`, using the module `PIL` to open the images. After that we use the function `Label` to put the images in the GUI.
