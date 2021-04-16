@@ -1,5 +1,5 @@
 # ImageViewer
-Simple mage app viewer written in Python using Tkinter
+Simple image app viewer written in Python using Tkinter
 
 
 In the GIF below we have a demonstration of the app being executed
