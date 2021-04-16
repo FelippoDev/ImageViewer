@@ -65,7 +65,7 @@ def forward():
     status.grid(row=2, column=0, columnspan=3, sticky=W+E)
 ```
 
-In the `back()` function we have the same principles as the `forward()` function but with the difference that if `n` is equal to 0 it means that we are in the first photo so we won't be able to go back and if it's not, the value stored in `n`  will be subtracted by -1 so it will be able to go to the previous image.
+In the `back()` function we have the same principles as the `forward()` function but with the difference that if `n` is equal to 0 it means that we are in the first photo so we won't be able to go back and if it's not, the value stored in `n`  will be subtracted by 1 so it will be able to go to the previous image.
 
 ```python
 def back():
